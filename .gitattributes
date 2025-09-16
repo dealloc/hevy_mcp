@@ -1,0 +1,6 @@
+# Set the default behaviour, in case people don't have core.autocrlf set.
+* text=auto eol=lf
+
+# Give nicer diffs where possible
+*.rs   diff=rust
+*.toml diff=toml
