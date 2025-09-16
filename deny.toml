@@ -1,0 +1,38 @@
+# This file is mostly copied from Bevy's deny.toml
+# https://github.com/bevyengine/bevy/blob/main/deny.toml
+
+[graph]
+all-features = true
+
+[output]
+feature-depth = 2
+
+[advisories]
+version = 2
+ignore = [
+]
+
+[licenses]
+private = { ignore = true }
+confidence-threshold = 0.9
+allow = [
+]
+
+[bans]
+allow-wildcard-paths = true
+multiple-versions = "allow"
+wildcards = "deny"
+# Certain crates that we don't want multiple versions of in the dependency tree
+deny = [
+]
+
+[bans.workspace-dependencies]
+duplicates = 'allow'
+include-path-dependencies = true
+unused = 'deny'
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []

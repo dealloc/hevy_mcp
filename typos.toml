@@ -1,0 +1,29 @@
+[files]
+extend-exclude = [
+  "*.pbxproj",               # metadata file
+  "*.patch",                 # Automatically generated files that should not be manually modified.
+  "*.bin",                   # Binary files
+  ".git/",                   # Version control files
+  "rustfmt.toml",            # Does not contain words that should be spellchecked.
+  "rust-toolchain.toml",     # likewise, shouldn't be spellchecked.
+  ".vscode/extensions.json", # likewise, shouldn't be spellchecked.
+  ".vscode/settings.json",   # likewise, shouldn't be spellchecked.
+  "committed.toml",          # Config file doesn't need checking
+  ".cargo/*.toml"
+]
+ignore-hidden = false
+
+[type.yaml]
+extend-ignore-re = [
+]
+
+[type.hbs]
+extend-ignore-re = [
+  "center"
+]
+
+[default]
+locale = "en-gb"
+extend-ignore-re = [
+  "hevy" # Name of the app we are building for, not a misspelling of "heavy"
+]
